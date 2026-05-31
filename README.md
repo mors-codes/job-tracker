@@ -22,11 +22,13 @@ A clean, responsive job application tracking web app that sends form data to an 
 
 ## 🔄 How It Works
 
-1. User fills out the application form (company, role, URL, date, status, notes, email)
-2. Form validates inputs and sends a JSON POST request to an n8n webhook
-3. n8n logs the submission as a new row in Google Sheets
-4. n8n sends a confirmation email to the user via Gmail
-5. User sees a success message in the browser
+1. User fills out the application form
+2. Form sends a JSON POST request to n8n webhook
+3. n8n passes the data to an AI Agent (GPT-4.1-mini)
+4. AI generates 3 personalized interview prep tips for the role
+5. n8n logs the submission as a new row in Google Sheets
+6. n8n sends a confirmation email with the AI tips via Gmail
+7. User sees a success message in the browser
 
 ---
 
